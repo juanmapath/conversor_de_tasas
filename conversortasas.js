@@ -31,16 +31,16 @@ function calcularTasa(tasa,tipoTasa1,tipoTasa2){
         } else if (tipoTasa2==="Efectiva Mensual"){
             return tasa;
         } else if (tipoTasa2==="Efectiva Anual"){
-            return tasa*12;
+            return ((tasa/100+1)**(12)-1)*100;
         }
 
     } else if (tipoTasa1=="Efectiva Anual"){
         if  (tipoTasa2==="Nominal Mensual"){
-            return (((tasa/100+1)**(1/12)-1)*100/12);
+            return (((tasa/100+1)**(1/12)-1)*100);
         } else if (tipoTasa2==="Nominal Anual") {
-            return (((tasa/100+1)**(1/12)-1)*100/12)*12;
+            return (((tasa/100+1)**(1/12)-1)*100)*12;
         } else if (tipoTasa2==="Efectiva Mensual"){
-            return tasa/12;
+            return ((tasa/100+1)**(1/12)-1)*100;
         } else if (tipoTasa2==="Efectiva Anual"){
             return tasa;
         }

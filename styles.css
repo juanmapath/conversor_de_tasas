@@ -53,6 +53,8 @@
   }
   
   body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem; /* 18px */
     font-weight: 400;
@@ -87,7 +89,8 @@
   .nav-list a:hover {
     background: var(--main-red);
   }
-  
+
+
   #banda{
     top: 0;
     left: 0;
@@ -101,11 +104,12 @@
     display: grid;
     grid-template-columns: 35% 25%;
     gap: 10px;
-    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     justify-content: center;
     align-items: center; /*alinea verticalmente elementos dentro del grid*/
     width: 100%;
-    height: 85vh;
+    /*height: 85vmax;*/
     background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   }
@@ -123,7 +127,8 @@
     border-top: 1px solid #dfdfdf;
   }
   .calculo-section-g2 {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 26px;
     text-align: right;
     
@@ -144,6 +149,31 @@
     font-size: 22px; 
   }
 
+  @media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .nav-list a {
+      font-size: 18px;
+    }
+    
+    h1{
+      font-size: 30px;
+    }
+    .calculo-section-g1{
+      font-size: 16px;;
+    }
+    .calculo-section-g2{
+      font-size: 18px;;
+    }
+    .calculo-section-g3{
+      font-size: 20px;;
+    }
+    .input {
+      width:140px;
+      height:22px;
+      font-size: 17px; 
+    }
+    
+  }
 
 
   .welcome-section {
@@ -167,7 +197,7 @@
   .projects-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-green);
+    background: var(--main-white);
   }
   
   .projects-section-header {
@@ -254,8 +284,9 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 70vh;
-    padding: 0 2rem;
+    /*height: 70vh;*/
+    padding-top: 25rem;
+    padding-bottom: 25rem;
     background: var(--main-gray);
   }
   
